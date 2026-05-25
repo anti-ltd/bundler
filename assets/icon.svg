@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="12%" y1="0%" x2="88%" y2="100%">
+      <stop offset="0%" stop-color="#050e1f"/>
+      <stop offset="50%" stop-color="#0d2d7e"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <radialGradient id="dome" cx="50%" cy="-18%" r="95%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.55"/>
+      <stop offset="42%" stop-color="#fff" stop-opacity="0.14"/>
+      <stop offset="62%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050b1a" stop-opacity="0.42"/>
+    </linearGradient>
+    <linearGradient id="gsheet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.52"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0.20"/>
+    </linearGradient>
+    <linearGradient id="gstrap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0.48"/>
+    </linearGradient>
+    <filter id="sh" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#020813" flood-opacity="0.52"/>
+    </filter>
+    <clipPath id="sq">
+      <path d="M1024.00,512.00 L1024.00,673.83 C1024.00,774.66 1024.00,825.08 1006.84,879.34 C985.27,938.60 938.60,985.27 879.34,1006.84 C825.08,1024.00 774.66,1024.00 673.83,1024.00 L350.17,1024.00 C249.34,1024.00 198.92,1024.00 144.66,1006.84 C85.40,985.27 38.73,938.60 17.16,879.34 C0.00,825.08 0.00,774.66 0.00,673.83 L0.00,350.17 C0.00,249.34 0.00,198.92 17.16,144.66 C38.73,85.40 85.40,38.73 144.66,17.16 C198.92,0.00 249.34,0.00 350.17,0.00 L673.83,0.00 C774.66,0.00 825.08,0.00 879.34,17.16 C938.60,38.73 985.27,85.40 1006.84,144.66 C1024.00,198.92 1024.00,249.34 1024.00,350.17 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- background -->
+  <path d="M1024.00,512.00 L1024.00,673.83 C1024.00,774.66 1024.00,825.08 1006.84,879.34 C985.27,938.60 938.60,985.27 879.34,1006.84 C825.08,1024.00 774.66,1024.00 673.83,1024.00 L350.17,1024.00 C249.34,1024.00 198.92,1024.00 144.66,1006.84 C85.40,985.27 38.73,938.60 17.16,879.34 C0.00,825.08 0.00,774.66 0.00,673.83 L0.00,350.17 C0.00,249.34 0.00,198.92 17.16,144.66 C38.73,85.40 85.40,38.73 144.66,17.16 C198.92,0.00 249.34,0.00 350.17,0.00 L673.83,0.00 C774.66,0.00 825.08,0.00 879.34,17.16 C938.60,38.73 985.27,85.40 1006.84,144.66 C1024.00,198.92 1024.00,249.34 1024.00,350.17 Z" fill="url(#bg)"/>
+  <g clip-path="url(#sq)">
+    <rect width="1024" height="1024" fill="url(#dome)"/>
+    <rect width="1024" height="1024" fill="url(#shade)"/>
+  </g>
+
+  <!-- three sheets + vertical strap -->
+  <g filter="url(#sh)">
+    <!-- sheet 1 -->
+    <rect x="262" y="311" width="500" height="86" rx="20" fill="url(#gsheet)"/>
+    <rect x="262" y="311" width="500" height="86" rx="20" fill="none" stroke="#fff" stroke-opacity="0.50" stroke-width="3"/>
+    <!-- sheet 2 -->
+    <rect x="262" y="469" width="500" height="86" rx="20" fill="url(#gsheet)"/>
+    <rect x="262" y="469" width="500" height="86" rx="20" fill="none" stroke="#fff" stroke-opacity="0.50" stroke-width="3"/>
+    <!-- sheet 3 -->
+    <rect x="262" y="627" width="500" height="86" rx="20" fill="url(#gsheet)"/>
+    <rect x="262" y="627" width="500" height="86" rx="20" fill="none" stroke="#fff" stroke-opacity="0.50" stroke-width="3"/>
+
+    <!-- vertical strap crossing all three -->
+    <rect x="488" y="291" width="48" height="440" rx="13" fill="url(#gstrap)"/>
+    <rect x="488" y="291" width="48" height="440" rx="13" fill="none" stroke="#fff" stroke-opacity="0.65" stroke-width="2.5"/>
+  </g>
+
+  <!-- squircle rim -->
+  <path d="M1024.00,512.00 L1024.00,673.83 C1024.00,774.66 1024.00,825.08 1006.84,879.34 C985.27,938.60 938.60,985.27 879.34,1006.84 C825.08,1024.00 774.66,1024.00 673.83,1024.00 L350.17,1024.00 C249.34,1024.00 198.92,1024.00 144.66,1006.84 C85.40,985.27 38.73,938.60 17.16,879.34 C0.00,825.08 0.00,774.66 0.00,673.83 L0.00,350.17 C0.00,249.34 0.00,198.92 17.16,144.66 C38.73,85.40 85.40,38.73 144.66,17.16 C198.92,0.00 249.34,0.00 350.17,0.00 L673.83,0.00 C774.66,0.00 825.08,0.00 879.34,17.16 C938.60,38.73 985.27,85.40 1006.84,144.66 C1024.00,198.92 1024.00,249.34 1024.00,350.17 Z" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-width="3"/>
+</svg>
