@@ -1,5 +1,5 @@
 import SwiftUI
-import iUX
+import iUX_MacOS
 
 enum BundlerSection: String, CaseIterable, Identifiable, SidebarItem {
     case modules = "Modules"

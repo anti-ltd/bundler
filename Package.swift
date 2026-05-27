@@ -5,12 +5,12 @@ let package = Package(
     name: "Bundler",
     platforms: [.macOS("26.0")],
     dependencies: [
-        .package(path: "../iUX"),
+        .package(path: "../iUX-MacOS"),
     ],
     targets: [
         .executableTarget(
             name: "Bundler",
-            dependencies: ["iUX"],
+            dependencies: ["iUX-MacOS"],
             path: "Sources/Bundler"
         ),
     ]

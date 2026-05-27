@@ -1,5 +1,5 @@
 import SwiftUI
-import iUX
+import iUX_MacOS
 
 struct BundlerApp: App {
     @State private var model = BundlerModel()
