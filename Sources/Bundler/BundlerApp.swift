@@ -1,7 +1,6 @@
 import SwiftUI
 import iUX
 
-@main
 struct BundlerApp: App {
     @State private var model = BundlerModel()
 

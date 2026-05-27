@@ -65,16 +65,14 @@ final class BundlerModel {
         log.state = .running
         buildLogs[definition.id] = log
 
-        await BuildEngine.run(
+        let success = await BuildEngine.run(
             definition: definition,
             modules: modules(for: definition),
             onEntry: { [weak self] entry in
                 Task { @MainActor in self?.buildLogs[definition.id]?.entries.append(entry) }
-            },
-            onFinish: { [weak self] success in
-                Task { @MainActor in self?.buildLogs[definition.id]?.state = success ? .succeeded : .failed }
             }
         )
+        buildLogs[definition.id]?.state = success ? .succeeded : .failed
     }
 
     // MARK: - Single-app wrap / DMG helpers (standalone tools)

@@ -2,15 +2,14 @@ import Foundation
 
 /// Generates a complete bundle host app project and builds it into a signed .app (and optionally .dmg).
 enum BuildEngine {
-    typealias OnEntry  = @Sendable (BuildLog.Entry) -> Void
-    typealias OnFinish = @Sendable (Bool) -> Void
+    typealias OnEntry = @Sendable (BuildLog.Entry) -> Void
 
+    @discardableResult
     static func run(
         definition: BundleDefinition,
         modules: [ModuleEntry],
-        onEntry: @escaping OnEntry,
-        onFinish: @escaping OnFinish
-    ) async {
+        onEntry: @escaping OnEntry
+    ) async -> Bool {
         let log = Logger(onEntry: onEntry)
         let workDir = FileManager.default.temporaryDirectory
             .appending(path: "bundler-\(definition.slug)-\(UUID().uuidString.prefix(8))", directoryHint: .isDirectory)
@@ -45,10 +44,10 @@ enum BuildEngine {
                 try await DMGEngine.run(appURL: destApp, outputDir: outDir, log: log)
             }
 
-            onFinish(true)
+            return true
         } catch {
             log.error(error.localizedDescription)
-            onFinish(false)
+            return false
         }
     }
 
